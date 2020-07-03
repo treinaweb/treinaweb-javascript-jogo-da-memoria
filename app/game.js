@@ -7,7 +7,7 @@ let cardList = [];
 let score = 0; 
 
 function startLogoList(logoList){
-    logoList.flatMap(name => [name, name])
+    return logoList.flatMap(name => [name, name])
     .map(name => ({name, position: Math.random()}))
     .sort((a,b) => a.position - b.position)
     .map((item, index) => ({
