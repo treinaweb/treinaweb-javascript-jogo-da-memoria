@@ -4,7 +4,7 @@ let isGameRunning = false;
 let canSelect = false;
 let selectedCards = [];
 let cardList = [];
-let score = 0;
+let score = 0; 
 
 function startLogoList(logoList){
     logoList.flatMap(name => [name, name])
