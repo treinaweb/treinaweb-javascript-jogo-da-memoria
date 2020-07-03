@@ -29,14 +29,23 @@ button{
     width: 120px;
     height: 180px;
     cursor: pointer;
+    perspective: 1000px;    
 }
 
 .flipper{
+    position: relative;
     width: 100%;
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.flipper.show{
+    transform: rotateY(180deg);
 }
 
 .flipper-face{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,6 +53,11 @@ button{
     background: radial-gradient(circle, #1c3647 0%, #2980b9 100%);
     width: 100%;
     height: 100%;
+    backface-visibility: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
 }
 
 .card-logo{
